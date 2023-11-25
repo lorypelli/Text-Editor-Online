@@ -1,0 +1,353 @@
+:focus {
+    outline: none;
+}
+
+body {
+    background-color: #363636;
+    overflow-x: hidden;
+}
+
+#emojipickerdiv {
+    display: block;
+}
+
+.mx-context-menu {
+    font-family: 'Martian Mono', monospace;
+}
+
+#emojipicker {
+    height: 290px;
+    width: 250px;
+    font-family: 'Martian Mono', monospace;
+    margin-top: -320px;
+    margin-right: 75px;
+}
+
+#closeemojipicker,
+#openemojipicker {
+    text-align: right;
+    margin-right: 2.5%;
+    font-family: 'Martian Mono', monospace;
+    font-size: 30px;
+    color: gray;
+    margin-top: -40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+#title,
+#text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid;
+    border-color: blueviolet;
+    border-radius: 10px;
+    background-color: #363636;
+    color: white;
+    margin-top: 15px;
+    padding-top: 2.5px;
+    height: 25px;
+    width: 95%;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+    font-weight: bold;
+    padding-left: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+#title:focus,
+#text:focus {
+    border-color: #ffa500;
+    transition: 0.5s ease-in-out;
+}
+
+#text {
+    height: 500px;
+}
+
+#titlechar,
+#textchar,
+#textrow {
+    text-align: right;
+    margin-right: 2.5%;
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+    color: gray;
+    margin-top: -30px;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+#textrow {
+    text-align: left;
+    margin-top: -40px;
+    margin-left: 2.5%;
+}
+
+#title::placeholder,
+#text::placeholder {
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+    font-weight: bold;
+    color: white;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#navbar {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: white;
+}
+
+#navtext {
+    font-family: 'Martian Mono', monospace;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#buttons {
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#save,
+#file,
+#share,
+#help,
+#next_session,
+#previous_session,
+#custom_session {
+    margin-top: 45px;
+    width: 300px;
+    height: 50px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 35px;
+    border: none;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    margin-right: -2.5px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#next_session,
+#previous_session,
+#custom_session {
+    margin-top: 30px;
+}
+
+#save,
+#previous_session {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#share,
+#next_session {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#tabs {
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: -5px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.tab {
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    border: 5px solid;
+    border-color: blueviolet;
+    width: 10%;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
+
+#help-btn {
+    text-align: right;
+}
+
+#help {
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    margin-right: 2.5%;
+    margin-top: -70px;
+    font-size: 40px;
+}
+
+::selection {
+    background-color: orange;
+    color: #363636;
+}
+
+::-moz-selection {
+    background-color: orange;
+    color: #363636;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #363636;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #505050;
+    border: 5px solid;
+    border-color: #363636;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1815px) {
+    #tab9 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 965px) {
+    #share {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+
+    #tab8 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    #file {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+
+    #file,
+    #next_session,
+    #previous_session,
+    #custom_session {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #tab7 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #help {
+        height: 40px;
+        width: 40px;
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+
+    #save,
+    #file,
+    #share,
+    #next_session,
+    #previous_session,
+    #custom_session {
+        font-size: 20px;
+        width: 200px;
+    }
+
+    #help {
+        margin-top: -40px;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+
+    #tab6 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+
+    #save,
+    #file,
+    #share,
+    #next_session,
+    #previous_session,
+    #custom_session {
+        width: 150px;
+    }
+
+    #help {
+        font-size: 10px;
+        height: 20px;
+        width: 20px;
+        margin-top: -40px;
+    }
+}
+
+@media only screen and (max-width: 235px) {
+
+    #tab5 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 170px) {
+
+    #tab4 {
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 180px) {
+
+    #save,
+    #file,
+    #share,
+    #next_session,
+    #previous_session,
+    #custom_session {
+        width: 100px;
+    }
+}
