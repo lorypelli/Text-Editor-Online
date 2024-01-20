@@ -5,9 +5,6 @@ import Textareas from './src/components/Textareas.vue';
 import Buttons from './src/components/Buttons.vue';
 import { h } from 'vue';
 import { ElMessageBox } from 'element-plus';
-const titlevalue = document.getElementById('title')!.value;
-const textvalue = document.getElementById('text')!.value;
-const titlebox = document.getElementById('title')!;
 export default {
     name: 'App',
     components: {
@@ -18,6 +15,9 @@ export default {
     },
     methods: {
         save() {
+            const titlevalue = document.getElementById('title')!.value;
+            const textvalue = document.getElementById('text')!.value;
+            const titlebox = document.getElementById('title')!;
             const file = new File([textvalue as string], `${titlevalue}.txt`, {
                 type: 'text/plain'
             });
@@ -53,6 +53,7 @@ export default {
                 });
         },
         loadFile() {
+            const titlebox = document.getElementById('title')!;
             const input = document.createElement('input');
             input.type = 'file';
             input.accept = '.txt';
@@ -84,6 +85,9 @@ export default {
             input.click();
         },
         share() {
+            const titlevalue = document.getElementById('title')!.value;
+            const textvalue = document.getElementById('text')!.value;
+            const titlebox = document.getElementById('title')!;
             const url = window.location.hostname;
             const urlbeginning = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1') ? 'http://' : 'https://';
             if ((titlevalue as string).length == 0 && (textvalue as string).length == 0) {

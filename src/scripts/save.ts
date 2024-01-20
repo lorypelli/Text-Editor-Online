@@ -1,8 +1,8 @@
 import { ElMessageBox } from 'element-plus';
-const titlevalue = document.getElementById('title')!.value;
-const textvalue = document.getElementById('text')!.value;
-const titlebox = document.getElementById('title')!;
 document.addEventListener('keydown', e => {
+    const titlevalue = document.getElementById('title')!.value;
+    const textvalue = document.getElementById('text')!.value;
+    const titlebox = document.getElementById('title')!;
     if (!e.shiftKey && e.ctrlKey && e.keyCode == 83) {
         e.preventDefault();
         const file = new File([textvalue as string], `${titlevalue}.txt`, {

@@ -5,9 +5,6 @@ import '../scripts/save';
 <script lang="ts">
 import { ElMessageBox, ElButton } from 'element-plus';
 import 'element-plus/dist/index.css';
-const titlevalue = document.getElementById('title')!.value;
-const textvalue = document.getElementById('text')!.value;
-const titlebox = document.getElementById('title')!;
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Buttons',
@@ -16,6 +13,9 @@ export default {
     },
     methods: {
         save() {
+            const titlevalue = document.getElementById('title')!.value;
+            const textvalue = document.getElementById('text')!.value;
+            const titlebox = document.getElementById('title')!;
             const file = new File([textvalue as string], `${titlevalue}.txt`, {
                 type: 'text/plain'
             });
@@ -51,6 +51,7 @@ export default {
                 });
         },
         loadFile() {
+            const titlebox = document.getElementById('title')!;
             const url = new URLSearchParams(window.location.search);
             if (url.has('title') || url.has('content')) {
                 ElMessageBox.alert('You can\'t use this because of titleparam or textparam', 'Error', { draggable: true, type: 'error', customStyle: { fontFamily: '\'Martian Mono\', monospace' }, distinguishCancelAndClose: true })
@@ -89,6 +90,9 @@ export default {
             input.click();
         },
         share() {
+            const titlevalue = document.getElementById('title')!.value;
+            const textvalue = document.getElementById('text')!.value;
+            const titlebox = document.getElementById('title')!;
             const url = window.location.hostname;
             const urlbeginning = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1') ? 'http://' : 'https://';
             if ((titlevalue as string).length == 0 && (textvalue as string).length == 0) {
@@ -130,6 +134,7 @@ export default {
             }
         },
         previousSession() {
+            const titlebox = document.getElementById('title')!;
             const urlParams = new URLSearchParams(window.location.search);
             let session = urlParams.get('session-id') as unknown as number;
             if (session == 1) {
@@ -143,6 +148,7 @@ export default {
             titlebox.focus();
         },
         nextSession() {
+            const titlebox = document.getElementById('title')!;
             const urlParams = new URLSearchParams(window.location.search);
             let session = urlParams.get('session-id') as unknown as number;
             if (session == 999999999999999) {
@@ -156,6 +162,7 @@ export default {
             titlebox.focus();
         },
         changeSession() {
+            const titlebox = document.getElementById('title')!;
             ElMessageBox.prompt('Type Session ID Here', 'Custom Session', { inputPlaceholder: 'Type Here...', draggable: true, type: 'info', customStyle: { fontFamily: '\'Martian Mono\', monospace' }, distinguishCancelAndClose: true })
                 .then(({ value }) => {
                     const number = parseInt(value);
