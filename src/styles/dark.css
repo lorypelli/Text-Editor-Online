@@ -1,3 +1,7 @@
+* {
+    font-family: 'Martian Mono', monospace;
+}
+
 :focus {
     outline: none;
 }
@@ -11,14 +15,9 @@ body {
     display: block;
 }
 
-.mx-context-menu {
-    font-family: 'Martian Mono', monospace;
-}
-
 #emojipicker {
     height: 290px;
     width: 250px;
-    font-family: 'Martian Mono', monospace;
     margin-top: -320px;
     margin-right: 75px;
 }
@@ -27,7 +26,6 @@ body {
 #openemojipicker {
     text-align: right;
     margin-right: 2.5%;
-    font-family: 'Martian Mono', monospace;
     font-size: 30px;
     color: gray;
     margin-top: -40px;
@@ -54,8 +52,6 @@ body {
     width: 95%;
     resize: none;
     font-size: 20px;
-    font-family: 'Martian Mono', monospace;
-    font-weight: bold;
     padding-left: 5px;
     transition: 0.5s ease-in-out;
 }
@@ -76,7 +72,6 @@ body {
     text-align: right;
     margin-right: 2.5%;
     font-size: 20px;
-    font-family: 'Martian Mono', monospace;
     color: gray;
     margin-top: -30px;
     -webkit-user-select: none;
@@ -94,7 +89,6 @@ body {
 #title::placeholder,
 #text::placeholder {
     font-size: 20px;
-    font-family: 'Martian Mono', monospace;
     font-weight: bold;
     color: white;
     -webkit-user-select: none;
@@ -110,7 +104,6 @@ body {
 }
 
 #navtext {
-    font-family: 'Martian Mono', monospace;
     font-size: 20px;
     color: white;
     text-align: center;
@@ -134,7 +127,6 @@ body {
     margin-top: 45px;
     width: 300px;
     height: 50px;
-    font-family: 'Martian Mono', monospace;
     font-size: 35px;
     border: none;
     color: black;
@@ -185,7 +177,6 @@ body {
     height: 30px;
     margin-left: 5px;
     margin-right: 5px;
-    font-family: 'Martian Mono', monospace;
     font-size: 15px;
     color: white;
     cursor: pointer;
@@ -246,7 +237,6 @@ body {
 }
 
 @media only screen and (max-width: 835px) {
-
     #tab8 {
         margin-top: -5px;
     }
@@ -259,7 +249,6 @@ body {
 }
 
 @media only screen and (max-width: 655px) {
-
     #file,
     #next_session,
     #previous_session,
@@ -269,7 +258,6 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-
     #tab7 {
         margin-top: -5px;
     }
@@ -284,7 +272,6 @@ body {
 }
 
 @media only screen and (max-width: 345px) {
-
     #save,
     #file,
     #share,
@@ -301,14 +288,12 @@ body {
 }
 
 @media only screen and (max-width: 335px) {
-
     #tab6 {
         margin-top: -5px;
     }
 }
 
 @media only screen and (max-width: 250px) {
-
     #save,
     #file,
     #share,
@@ -327,15 +312,7 @@ body {
 }
 
 @media only screen and (max-width: 235px) {
-
     #tab5 {
-        margin-top: -5px;
-    }
-}
-
-@media only screen and (max-width: 170px) {
-
-    #tab4 {
         margin-top: -5px;
     }
 }
@@ -349,5 +326,11 @@ body {
     #previous_session,
     #custom_session {
         width: 100px;
+    }
+}
+
+@media only screen and (max-width: 170px) {
+    #tab4 {
+        margin-top: -5px;
     }
 }
