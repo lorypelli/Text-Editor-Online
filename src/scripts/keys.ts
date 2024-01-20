@@ -1,6 +1,10 @@
 export function keys() {
-    const titlebox = document.getElementById('title');
-    const textbox = document.getElementById('text');
+    const titlebox = document.getElementById('title')!;
+    const textbox = document.getElementById('text')!;
+    const navbar = document.getElementById('navbar')!;
+    const button = document.getElementById('buttons')!;
+    const tabs = document.getElementById('tabs')!;
+    const help_btn = document.getElementById('help-btn')!;
     document.addEventListener('keydown', e => {
         if (e.altKey) {
             switch (e.keyCode) {
@@ -33,42 +37,36 @@ export function keys() {
             } break;
             }
         }
-        switch (true) {
-        case e.keyCode == 122: {
+        if (e.keyCode == 122) {
             e.preventDefault();
-            if (document.getElementById('tabs')!.style.display != 'none') {
-                document.getElementById('navbar')!.style.display = 'none';
-                document.getElementById('buttons')!.style.display = 'none';
-                document.getElementById('help-btn')!.style.display = 'none';
-                document.getElementById('tabs')!.style.display = 'none';
-                document.getElementById('title')!.style.height = '165px';
-                document.getElementById('text')!.style.height = '700px';
+            if (tabs.style.display != 'none') {
+                navbar.style.display = 'none';
+                button.style.display = 'none';
+                help_btn.style.display = 'none';
+                tabs.style.display = 'none';
+                titlebox.style.height = '165px';
+                textbox.style.height = '700px';
             }
             else {
-                document.getElementById('navbar')!.style.display = 'block';
-                document.getElementById('buttons')!.style.display = 'block';
-                document.getElementById('help-btn')!.style.display = 'block';
-                document.getElementById('tabs')!.style.display = 'block';
-                document.getElementById('title')!.style.height = '25px';
-                document.getElementById('text')!.style.height = '500px';
-            }       
-        } break;
+                navbar.style.display = 'block';
+                button.style.display = 'block';
+                help_btn.style.display = 'block';
+                tabs.style.display = 'block';
+                titlebox.style.height = '25px';
+                textbox.style.height = '500px';
+            }
         }
     });
-    titlebox!.addEventListener('keydown', e => {
-        switch (true) {
-        case e.keyCode == 9 || e.keyCode == 13 || e.keyCode == 38 && (titlebox!.value as string).length == 0 || e.keyCode == 39 && (titlebox!.value as string).length == 0 || e.keyCode == 40 && (titlebox!.value as string).length == 0: {
+    titlebox.addEventListener('keydown', e => {
+        if (e.keyCode == 9 || e.keyCode == 13 || e.keyCode == 38 && (titlebox!.value as string).length == 0 || e.keyCode == 39 && (titlebox!.value as string).length == 0 || e.keyCode == 40 && (titlebox!.value as string).length == 0) {
             e.preventDefault();
-            textbox!.focus();
-        } break;
+            textbox.focus();
         }
     });
-    textbox!.addEventListener('keydown', e => {
-        switch (true) {
-        case e.keyCode == 8 && (textbox!.value as string).length == 0 || e.keyCode == 9 || e.keyCode == 37 && (textbox!.value as string).length == 0 || e.keyCode == 38 && (textbox!.value as string).length == 0 || e.keyCode == 40 && (textbox!.value as string).length == 0: {
+    textbox.addEventListener('keydown', e => {
+        if (e.keyCode == 8 && (textbox!.value as string).length == 0 || e.keyCode == 9 || e.keyCode == 37 && (textbox!.value as string).length == 0 || e.keyCode == 38 && (textbox!.value as string).length == 0 || e.keyCode == 40 && (textbox!.value as string).length == 0) {
             e.preventDefault();
-            titlebox!.focus();
-        } break;
+            titlebox.focus();
         }
     });
 }

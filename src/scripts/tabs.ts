@@ -9,9 +9,11 @@ export function tabs() {
     const tab8 = document.getElementsByClassName('tab')[7];
     const tab9 = document.getElementsByClassName('tab')[8];
     const url = new URLSearchParams(window.location.search);
+    const session = url.get('session-id');
+    const titlebox = document.getElementById('title')!;
     tab1.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=1`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=1`;
+        titlebox.focus();
         tab1.style.borderColor = 'orange';
         tab2.style.borderColor = 'blueviolet';
         tab3.style.borderColor = 'blueviolet';
@@ -23,8 +25,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab2.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=2`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=2`;
+        titlebox.focus();
         tab2.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab3.style.borderColor = 'blueviolet';
@@ -36,8 +38,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab3.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=3`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=3`;
+        titlebox.focus();
         tab3.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -49,8 +51,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab4.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=4`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=4`;
+        titlebox.focus();
         tab4.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -62,8 +64,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab5.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=5`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=5`;
+        titlebox.focus();
         tab5.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -75,8 +77,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab6.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=6`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=6`;
+        titlebox.focus();
         tab6.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -88,8 +90,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab7.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=7`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=7`;
+        titlebox.focus();
         tab7.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -101,8 +103,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab8.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=8`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=8`;
+        titlebox.focus();
         tab8.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';
@@ -114,8 +116,8 @@ export function tabs() {
         tab9.style.borderColor = 'blueviolet';
     });
     tab9.addEventListener('click', () => {
-        location.href = `?session-id=${url.get('session-id')}&tab=9`;
-        document.getElementById('title')!.focus();
+        location.href = `?session-id=${session}&tab=9`;
+        titlebox.focus();
         tab9.style.borderColor = 'orange';
         tab1.style.borderColor = 'blueviolet';
         tab2.style.borderColor = 'blueviolet';

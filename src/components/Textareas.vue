@@ -1,6 +1,10 @@
 <script lang="ts">
 import EmojiPicker, { EmojiExt } from 'vue3-emoji-picker';
 import 'vue3-emoji-picker/css';
+const emojipickerdiv = document.getElementById('emojipickerdiv')!;
+const openemojipicker = document.getElementById('openemojipicker')!;
+const closeemojipicker = document.getElementById('closeemojipicker')!;
+const text = document.getElementById('text')!;
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Textareas',
@@ -9,24 +13,24 @@ export default {
     },
     methods: {
         closeemojipicker() {
-            document.getElementById('emojipickerdiv')!.style.display = 'none';
-            document.getElementById('openemojipicker')!.style.display = 'block';
-            document.getElementById('openemojipicker')!.style.marginTop = '-70px';
-            document.getElementById('closeemojipicker')!.style.display = 'none';
-            document.getElementById('text')!.focus();
+            emojipickerdiv.style.display = 'none';
+            openemojipicker.style.display = 'block';
+            openemojipicker.style.marginTop = '-70px';
+            closeemojipicker.style.display = 'none';
+            text.focus();
         },
         openemojipicker() {
-            document.getElementById('emojipickerdiv')!.style.display = 'block';
-            document.getElementById('openemojipicker')!.style.display = 'none';
-            document.getElementById('closeemojipicker')!.style.display = 'block';
-            document.getElementById('text')!.focus();
+            emojipickerdiv.style.display = 'block';
+            openemojipicker.style.display = 'none';
+            closeemojipicker.style.display = 'block';
+            text.focus();
         },
         clickEmoji(emoji: EmojiExt) {
             let url = new URLSearchParams(window.location.search);
             if (url.get('title') || url.get('content')) return;
             else {
-                document.getElementById('text')!.value = localStorage.getItem(`text${url.get('session-id')}&${url.get('tab')}`) + emoji.i;
-                document.getElementById('text')!.focus();
+                text.value = localStorage.getItem(`text${url.get('session-id')}&${url.get('tab')}`) + emoji.i;
+                text.focus();
             }
         }
     }

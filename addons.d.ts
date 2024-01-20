@@ -16,4 +16,4 @@ declare global {
         tagName: string
     }
 }
-export {}
+export {};
